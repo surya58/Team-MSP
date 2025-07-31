@@ -22,7 +22,6 @@ interface ValidationErrors {
   [key: string]: string;
 }
 
-// Step Indicator Component
 const StepIndicator = ({ currentStep }: { currentStep: number }) => (
   <div className="flex items-center justify-center mb-8">
     {[1, 2, 3].map((step, index) => {
@@ -89,7 +88,6 @@ export default function Step2() {
       [field]: value
     }));
     
-    // Clear error when user starts typing
     if (errors[field]) {
       setErrors(prev => ({
         ...prev,
