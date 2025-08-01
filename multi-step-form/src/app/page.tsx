@@ -1,17 +1,22 @@
 'use client'
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Our Platform</h1>
-        <p className="text-gray-600 mb-8">Join us today with our simple signup process</p>
-        <Link href="/signup/step1">
-          <Button size="lg">Get Started</Button>
-        </Link>
-      </div>
+    <div className="min-h-screen flex items-center justify-center p-4">
+      <Card className="w-full max-w-md">
+        <CardHeader className="text-center">
+          <CardTitle className="text-4xl font-bold mb-2">Welcome to Our Platform</CardTitle>
+          <CardDescription className="text-lg">Join us today with our simple signup process</CardDescription>
+        </CardHeader>
+        <CardContent className="text-center">
+          <Link href="/signup/step1">
+            <Button size="lg" className="w-full">Get Started</Button>
+          </Link>
+        </CardContent>
+      </Card>
     </div>
   );
 }
